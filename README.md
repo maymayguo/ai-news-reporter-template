@@ -193,6 +193,36 @@ Claude Code 会自动创建定时任务。
 *本报告由 AI News Reporter 自动生成*
 ```
 
+## 前端展示页面
+
+项目包含一个Web前端，供其他用户浏览和下载日报。
+
+### 本地预览
+
+```bash
+npm run serve
+# 访问 http://localhost:3000
+```
+
+### 部署到GitHub Pages
+
+1. 推送代码到GitHub
+2. 进入仓库 Settings > Pages
+3. Source选择 `main` 分支，目录选择 `/frontend`
+4. 访问 `https://your-username.github.io/ai-news-reporter-template/`
+
+### 前端功能
+
+| 功能 | 描述 |
+|------|------|
+| 📄 报告列表 | 展示所有日报 |
+| 🔍 搜索过滤 | 按日期/关键词搜索 |
+| 📥 下载 | 一键下载Markdown文件 |
+| 📋 复制 | 复制报告内容 |
+| 🔔 通知 | 浏览器推送提醒 |
+
+详细部署说明见 [frontend/DEPLOY.md](frontend/DEPLOY.md)
+
 ## 技术栈
 
 - **Runtime**: Node.js 14+

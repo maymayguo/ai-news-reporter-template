@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI及机器人研究日报</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>AI及机器人研究日报</h1>
+            <p class="subtitle">每日自动收集 · 智能去重分类 · 一键下载</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 统计卡片 -->
+        <section class="stats">
+            <div class="stat-card">
+                <div class="stat-number" id="totalReports">-</div>
+                <div class="stat-label">累计报告</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="totalNews">-</div>
+                <div class="stat-label">新闻条目</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="lastUpdate">-</div>
+                <div class="stat-label">最后更新</div>
+            </div>
+        </section>
+
+        <!-- 报告列表 -->
+        <section class="reports-section">
+            <h2>日报列表</h2>
+            <div class="filter-bar">
+                <input type="text" id="searchInput" placeholder="搜索报告内容...">
+                <select id="categoryFilter">
+                    <option value="all">全部分类</option>
+                    <option value="macro">宏观趋势</option>
+                    <option value="compute">算力基础</option>
+                    <option value="model">模型发展</option>
+                    <option value="application">智能应用</option>
+                    <option value="robotics">机器人</option>
+                    <option value="research">学术研究</option>
+                </select>
+            </div>
+            <div id="reportList" class="report-list">
+                <!-- 报告列表将动态加载 -->
+            </div>
+        </section>
+
+        <!-- 订阅区域 -->
+        <section class="subscribe-section">
+            <h2>订阅日报</h2>
+            <p>通过以下方式获取每日最新AI资讯：</p>
+            <div class="subscribe-options">
+                <a href="https://github.com/your-username/ai-news-reporter-template" class="btn btn-primary" target="_blank">
+                    <span class="icon">📦</span> GitHub仓库
+                </a>
+                <a href="#" class="btn btn-secondary" id="rssLink">
+                    <span class="icon">📡</span> RSS订阅
+                </a>
+                <button class="btn btn-secondary" id="notifyBtn">
+                    <span class="icon">🔔</span> 浏览器通知
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <!-- 报告详情模态框 -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="modalTitle">报告详情</h2>
+                <button class="close-btn" id="closeModal">&times;</button>
+            </div>
+            <div class="modal-body" id="modalBody">
+                <!-- 报告内容 -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" id="downloadBtn">
+                    <span class="icon">📥</span> 下载Markdown
+                </button>
+                <button class="btn btn-secondary" id="copyBtn">
+                    <span class="icon">📋</span> 复制内容
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>数据来源: TechCrunch | MIT Technology Review | Hacker News | Nature MI | Reddit | Google News</p>
+            <p>© 2026 AI News Reporter. Made with ❤️ by Claude Code</p>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
