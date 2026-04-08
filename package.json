@@ -1,0 +1,32 @@
+{
+  "name": "ai-news-reporter",
+  "version": "1.0.0",
+  "description": "AI及机器人新闻自动收集与日报生成工具",
+  "main": "src/news-collector.js",
+  "scripts": {
+    "collect": "node src/news-collector.js",
+    "report": "node src/news-collector.js && echo 'Report generated'",
+    "clean": "rm -rf reports/daily/*.md",
+    "test": "node src/news-collector.js"
+  },
+  "keywords": [
+    "ai",
+    "news",
+    "robotics",
+    "report",
+    "automation",
+    "rss",
+    "claude"
+  ],
+  "author": "",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/ai-news-reporter-template.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "dependencies": {},
+  "devDependencies": {}
+}
