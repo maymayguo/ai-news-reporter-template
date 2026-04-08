@@ -5,8 +5,8 @@
 
 // 配置
 const CONFIG = {
-    // GitHub仓库配置（需要替换为实际地址）
-    repo: 'your-username/ai-news-reporter-template',
+    // GitHub仓库配置
+    repo: 'maymayguo/ai-news-reporter-template',
     branch: 'main',
     reportsPath: 'reports/daily',
 
