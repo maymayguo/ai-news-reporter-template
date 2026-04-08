@@ -96,19 +96,22 @@ async function loadReports() {
     }
 }
 
-// 获取本地报告（演示数据）
+// 获取本地报告（从服务器读取）
 async function getLocalReports() {
-    // 模拟GitHub API返回的数据
-    // 实际部署时替换为真实API调用
+    try {
+        // 从本地服务器获取reports目录下的文件列表
+        const response = await fetch('/api/reports');
+        if (response.ok) {
+            return await response.json();
+        }
+    } catch (e) {
+        console.log('API not available, using fallback');
+    }
+
+    // 回退：模拟数据
     return [
-        { name: '2026-04-08.md', size: 15000 },
-        { name: '2026-04-07.md', size: 24000 },
-        { name: '2026-04-06.md', size: 18000 },
-        { name: '2026-04-05.md', size: 12000 },
-        { name: '2026-04-04.md', size: 16000 },
-        { name: '2026-04-03.md', size: 20000 },
-        { name: '2026-04-02.md', size: 14000 },
-        { name: '2026-04-01.md', size: 22000 }
+        { name: '2026-04-08.md', size: 10274 },
+        { name: '2026-04-03_to_2026-04-07.md', size: 24168 }
     ];
 }
 
@@ -134,6 +137,10 @@ function parseDateFromFilename(filename) {
 
 // 获取文件URL
 function getFileUrl(filename) {
+    // 本地服务器路径
+    if (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1') {
+        return `/reports/daily/${filename}`;
+    }
     // GitHub raw文件URL
     return `https://raw.githubusercontent.com/${CONFIG.repo}/${CONFIG.branch}/${CONFIG.reportsPath}/${filename}`;
 }
