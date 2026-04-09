@@ -1,10 +1,10 @@
 # Dependencies
 node_modules/
 
-# Output reports (keep examples and README)
-reports/daily/[0-9]*.md
-!reports/daily/EXAMPLE.md
-!reports/daily/README.md
+# Output reports - keep all daily reports
+# (Removed ignore rule to allow reports to be pushed to GitHub)
+reports/daily/*.md
+!reports/daily/.gitkeep
 
 # OS files
 .DS_Store
