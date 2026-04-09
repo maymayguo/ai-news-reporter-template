@@ -2,9 +2,9 @@
 node_modules/
 
 # Output reports - keep all daily reports
-# (Removed ignore rule to allow reports to be pushed to GitHub)
 reports/daily/*.md
-!reports/daily/.gitkeep
+!reports/daily/EXAMPLE.md
+!reports/daily/README.md
 
 # OS files
 .DS_Store

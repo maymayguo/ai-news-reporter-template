@@ -9,6 +9,9 @@ on:
     paths:
       - 'src/**'
 
+permissions:
+  contents: write  # 允许推送报告
+
 jobs:
   generate-report:
     runs-on: ubuntu-latest
