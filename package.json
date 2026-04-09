@@ -4,8 +4,8 @@
   "description": "AI及机器人新闻自动收集与日报生成工具",
   "main": "src/news-collector.js",
   "scripts": {
-    "collect": "node src/news-collector.js",
-    "report": "node src/news-collector.js && echo 'Report generated'",
+    "collect": "node src/generate-report.js",
+    "report": "node src/generate-report.js",
     "clean": "rm -rf reports/daily/*.md",
     "test": "node src/news-collector.js",
     "serve": "node frontend/server.js",
